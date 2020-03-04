@@ -17,11 +17,7 @@ fn main() {
     let n = words[1];
     let w = words[2];
 
-    let mut total = 0;
-
-    for i in 1..w+1 {
-        total += i*k;
-    }
+    let mut total = w*(w+1)/2*k;
 
     let borrow = total - n;
 
