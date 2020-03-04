@@ -1,5 +1,10 @@
 use std::io;
 
+fn is_lucky(n: u32) -> bool {
+    let decimal = format!("{}", n);
+    decimal.chars().all(|x| x == '4' || x == '7')
+}
+
 fn main() {
     let mut n = String::new();
 
@@ -9,14 +14,20 @@ fn main() {
 
     let n : i64 = n.trim().parse().unwrap();
 
-    let lucky = [4,7,44,47,74,444,447,474,477,744,747,777];
+    let mut lucky = Vec::<i64>::new();
+
+    for i in 1..1001 {
+        if is_lucky(i) {
+            lucky.push(i as i64);
+            break;
+        }
+    }
 
     let mut flag = false;
 
-    for d in lucky.iter() {
+    for d in lucky {
         if n % d == 0 {
             flag = true;
-            break;
         }
     }
 
