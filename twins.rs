@@ -21,11 +21,11 @@ fn main() {
         .map(|x| x.parse().unwrap())
         .collect();
 
-    a.sort_by(|a, b| b.cmp(a));
+    a.sort_by(|x, y| y.cmp(x));
 
     let mut total = 0;
 
-    for item in a {
+    for item in a.clone() {
         total += item;
     }
 
@@ -34,7 +34,7 @@ fn main() {
 
     for item in a {
         let twin = total - mine;
-        if twin > mine {
+        if mine > twin {
             break;
         } else {
             mine += item;
