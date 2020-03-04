@@ -19,7 +19,6 @@ fn main() {
     for i in 1..1001 {
         if is_lucky(i) {
             lucky.push(i as i64);
-            break;
         }
     }
 
@@ -28,6 +27,7 @@ fn main() {
     for d in lucky {
         if n % d == 0 {
             flag = true;
+            break;
         }
     }
 
