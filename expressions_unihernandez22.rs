@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 // https://codeforces.com/problemset/problem/479/A
-=======
->>>>>>> 04764c36918988fc46659a3e1c8c192500f5e766
 use std::io;
 
 fn main() {
