@@ -1,3 +1,4 @@
+// https://codeforces.com/problemset/problem/263/A
 use std::io;
 
 fn main() {
@@ -5,9 +6,7 @@ fn main() {
     for _ in 0..5 {
         let mut line = String::new();
 
-        io::stdin()
-            .read_line(&mut line)
-            .unwrap();
+        io::stdin().read_line(&mut line).unwrap();
 
         let words: Vec<i32> = line
             .split_whitespace()
@@ -17,8 +16,8 @@ fn main() {
         matrix.push(words);
     }
 
-    let mut n : i32 = 0;
-    let mut m : i32 = 0;
+    let mut n: i32 = 0;
+    let mut m: i32 = 0;
 
     for i in 0..5 {
         for j in 0..5 {
@@ -29,5 +28,5 @@ fn main() {
         }
     }
 
-    println!("{}",i32::abs(n-2)+i32::abs(m-2));
+    println!("{}", i32::abs(n - 2) + i32::abs(m - 2));
 }

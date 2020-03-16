@@ -1,15 +1,14 @@
-use std::io;
+// https://codeforces.com/problemset/problem/271/A
 use std::collections::HashSet;
+use std::io;
 
 fn main() {
     let mut year = String::new();
 
-    io::stdin()
-        .read_line(&mut year)
-        .unwrap();
+    io::stdin().read_line(&mut year).unwrap();
 
     let mut year: i64 = year.trim().parse().unwrap();
-    
+
     loop {
         year += 1;
 
@@ -28,4 +27,3 @@ fn main() {
         }
     }
 }
-
