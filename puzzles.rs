@@ -30,18 +30,14 @@ fn main() {
 
     f.sort();
 
-    println!("{:?}", f);
-
     let mut minima = 999;
 
-    let mut iterator = f.iter();
+    let iter = f.windows(n as usize);
 
-    let mut first = f.next();
-    let mut last = f.next();
-
-    for _ in 0..n-1 {
-        last = f.next();
+    for x in iter {
+        minima = std::cmp::min(minima, x.last().unwrap() - x[0]);
     }
 
     println!("{}", minima);
 }
+
