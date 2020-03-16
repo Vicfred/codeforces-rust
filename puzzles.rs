@@ -4,12 +4,9 @@ use std::io;
 fn main() {
     let mut line = String::new();
 
-    io::stdin()
-        .read_line(&mut line)
-        .unwrap();
+    io::stdin().read_line(&mut line).unwrap();
 
-    let words: Vec<i64> =
-        line
+    let words: Vec<i64> = line
         .split_whitespace()
         .map(|x| x.parse().unwrap())
         .collect();
@@ -18,12 +15,9 @@ fn main() {
 
     let mut line = String::new();
 
-    io::stdin()
-        .read_line(&mut line)
-        .unwrap();
+    io::stdin().read_line(&mut line).unwrap();
 
-    let mut f: Vec<i64> =
-        line
+    let mut f: Vec<i64> = line
         .split_whitespace()
         .map(|x| x.parse().unwrap())
         .collect();
