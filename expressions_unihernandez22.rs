@@ -1,3 +1,4 @@
+// https://codeforces.com/problemset/problem/479/A
 use std::io;
 
 fn main() {
