@@ -1,3 +1,4 @@
+// https://codeforces.com/problemset/problem/122/A
 use std::io;
 
 fn is_lucky(n: u32) -> bool {
@@ -8,11 +9,9 @@ fn is_lucky(n: u32) -> bool {
 fn main() {
     let mut n = String::new();
 
-    io::stdin()
-        .read_line(&mut n)
-        .unwrap();
+    io::stdin().read_line(&mut n).unwrap();
 
-    let n : i64 = n.trim().parse().unwrap();
+    let n: i64 = n.trim().parse().unwrap();
 
     let mut lucky = Vec::<i64>::new();
 
