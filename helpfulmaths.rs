@@ -1,19 +1,19 @@
+// https://codeforces.com/problemset/problem/339/A
 use std::io;
 
 fn main() {
     let mut input = String::new();
 
-    io::stdin().read_line(&mut input)
-        .unwrap();
+    io::stdin().read_line(&mut input).unwrap();
 
-    let mut numbers = [0;4];
+    let mut numbers = [0; 4];
 
     for letter in input.chars() {
         match letter {
             '1' => numbers[1] += 1,
             '2' => numbers[2] += 1,
             '3' => numbers[3] += 1,
-             _  => {},
+            _ => {}
         }
     }
 
@@ -32,5 +32,5 @@ fn main() {
         answer.push('+');
     }
 
-    println!("{}", &answer[..answer.len()-1]);
+    println!("{}", &answer[..answer.len() - 1]);
 }

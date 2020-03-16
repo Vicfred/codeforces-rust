@@ -1,22 +1,18 @@
+// https://codeforces.com/problemset/problem/160/A
 use std::io;
 
 fn main() {
     let mut n = String::new();
 
-    io::stdin()
-        .read_line(&mut n)
-        .unwrap();
+    io::stdin().read_line(&mut n).unwrap();
 
     //let n: i64 = n.trim().parse().unwrap();
 
     let mut line = String::new();
 
-    io::stdin()
-        .read_line(&mut line)
-        .unwrap();
+    io::stdin().read_line(&mut line).unwrap();
 
-    let mut a: Vec<i64> =
-        line
+    let mut a: Vec<i64> = line
         .split_whitespace()
         .map(|x| x.parse().unwrap())
         .collect();

@@ -1,10 +1,10 @@
+// https://codeforces.com/problemset/problem/231/A
 use std::io;
 
 fn main() {
     let mut n = String::new();
 
-    io::stdin().read_line(&mut n)
-        .unwrap();
+    io::stdin().read_line(&mut n).unwrap();
 
     let mut n = n.trim().parse::<i32>().unwrap();
 
@@ -13,8 +13,7 @@ fn main() {
     while n > 0 {
         let mut line = String::new();
 
-        io::stdin().read_line(&mut line)
-            .unwrap();
+        io::stdin().read_line(&mut line).unwrap();
 
         let words: Vec<i64> = line
             .split_whitespace()
