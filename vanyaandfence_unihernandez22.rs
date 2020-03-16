@@ -1,3 +1,4 @@
+// https://codeforces.com/problemset/problem/677/A
 use std::io::stdin;
 
 fn main() {

@@ -1,11 +1,10 @@
+// https://codeforces.com/problemset/problem/58/A
 use std::io;
 
 fn main() {
     let mut s = String::new();
 
-    io::stdin()
-        .read_line(&mut s)
-        .unwrap();
+    io::stdin().read_line(&mut s).unwrap();
 
     let s = s.trim();
 
@@ -17,7 +16,7 @@ fn main() {
         if idx >= 5 {
             break;
         }
-        if ch.to_string() == &hello[idx..idx+1] {
+        if ch.to_string() == &hello[idx..idx + 1] {
             idx += 1;
         }
     }
@@ -27,5 +26,4 @@ fn main() {
     } else {
         println!("NO");
     }
- 
 }
