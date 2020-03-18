@@ -4,14 +4,16 @@ use std::io::stdin;
 fn recursiva(n: i32) -> String {
     if n == 1 {
         return String::from("I hate ");
-    } else if n % 2 == 0 {
-        let mut a = recursiva(n - 1);
-        a.push_str("that I love ");
-        return a;
     } else {
         let mut a = recursiva(n - 1);
-        a.push_str("that I hate ");
-        return a;
+
+        if n % 2 == 0 {
+            a.push_str("that I love ");
+            return a;
+        } else {
+            a.push_str("that I hate ");
+            return a;
+        }
     }
 }
 
