@@ -11,8 +11,6 @@ fn main() {
 
     let a = a.trim();
 
-    let a: Vec<char> = a.chars().collect();
-
     let mut b = String::new();
 
     io::stdin()
@@ -21,12 +19,12 @@ fn main() {
 
     let b = b.trim();
 
-    let b: Vec<char> = b.chars().collect();
+    let mut iter = b.chars();
 
     let mut answer = String::from("");
 
-    for i in 0..a.len() {
-        if a[i] == b[i] {
+    for ch in a.chars() {
+        if ch == iter.next().unwrap() {
             answer.push_str("0");
         } else {
             answer.push_str("1");
