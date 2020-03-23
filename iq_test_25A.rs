@@ -1,4 +1,4 @@
-// https://codeforces.com/problemset/problem/200/B
+// https://codeforces.com/problemset/problem/25/A
 // implementation, simulation
 use std::io;
 
