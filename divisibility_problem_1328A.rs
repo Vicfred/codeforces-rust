@@ -1,4 +1,5 @@
 // https://codeforces.com/problemset/problem/1328/A
+// simple math
 use std::io;
 
 fn main() {
