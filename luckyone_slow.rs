@@ -1,5 +1,6 @@
 // tuenti 2020 problem 2
 use std::io;
+use std::collections::HashSet;
 
 fn main() {
     let mut c = String::new();
@@ -18,9 +19,9 @@ fn main() {
             .unwrap();
 
         let n: i64 = n.trim().parse().unwrap();
-        let mut first = true;
 
-        let mut best = -1;
+        let mut losers = HashSet::new();
+        let mut maxima = 0;
 
         for _ in 0..n {
             let mut line = String::new();
@@ -39,18 +40,16 @@ fn main() {
             let b = words[1];
             let r = words[2];
 
-            if first {
-                best = if r == 1 {a} else {b};
-                first = false;
-            }
+            maxima = std::cmp::max(a,std::cmp::max(b,maxima));
 
-            if r == 1 && b == best {
-                best = a;
-            }
-            else if r == 0 && a == best {
-                best = b;
+            losers.insert(if r == 1 {b} else {a});
+        }
+        
+        for player in 1..=maxima {
+            if !losers.contains(&player) {
+                println!("Case #{}: {}", kase, player);
+                break;
             }
         }
-        println!("Case #{}: {}", kase, best);
     }
 }
